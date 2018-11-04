@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.tobi.voiceassistant">
+
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.READ_CALL_LOG" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+
+    <application
+        android:name=".config.Talk"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".activities.MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activities.MessageDetails"
+            android:label="@string/title_activity_message_details"
+            android:parentActivityName=".activities.MainActivity"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.tobi.voiceassistant.activities.MainActivity" />
+        </activity>
+
+        <activity
+            android:name=".activities.CallDetails"
+            android:label="@string/title_activity_call_details"
+            android:parentActivityName=".activities.MainActivity"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.tobi.voiceassistant.activities.MainActivity" />
+        </activity>
+
+        <activity
+            android:name=".activities.BatteryDetails"
+            android:label="@string/title_activity_battery_details"
+            android:parentActivityName=".activities.MainActivity"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.tobi.voiceassistant.activities.MainActivity" />
+        </activity>
+
+        <activity
+            android:name=".activities.CallOptions"
+            android:excludeFromRecents="true"
+            android:theme="@style/dialog" />
+
+        <activity
+            android:name=".activities.SmsOptions"
+            android:excludeFromRecents="true"
+            android:theme="@style/dialog" />
+
+        <activity
+            android:name=".activities.NoteOptions"
+            android:excludeFromRecents="true"
+            android:theme="@style/dialog" />
+
+        <activity
+            android:name=".activities.Notes"
+            android:label="@string/title_activity_notes"
+            android:parentActivityName=".activities.MainActivity"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.tobi.voiceassistant.activities.MainActivity" />
+        </activity>
+
+        <activity
+            android:name=".activities.CreateNote"
+            android:label="@string/title_activity_create_note"
+            android:parentActivityName=".activities.Notes"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.tobi.voiceassistant.activities.Notes" />
+        </activity>
+
+    </application>
+
+</manifest>
