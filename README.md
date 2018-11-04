@@ -1,5 +1,7 @@
 # VoiceAssistant
-Voice assistant is an app aimed at helping visually impaired people
+
+![alt text](https://github.com/tobioyelekan/VoiceAssistant/blob/master/Capture.PNG)
+<br>Voice assistant is an app aimed at helping visually impaired people
 <br>With this app users can perform some of the following basic functions;
 <li>Read and send messages</li>
 <li>Make phone calls and read call logs</li>
